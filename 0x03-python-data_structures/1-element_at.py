@@ -5,7 +5,7 @@ def element_at(my_list, idx):
     a list like in C.
     """
     if my_list:
-        if idx < 0:
+        if idx <= 0:
             return None
         elif idx > len(my_list):
             return None
