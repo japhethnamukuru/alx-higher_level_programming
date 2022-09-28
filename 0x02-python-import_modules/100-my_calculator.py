@@ -3,7 +3,7 @@ from calculator_1 import add, sub, mul, div
 def calc_argv(argv):
     args = len(argv) - 1
     if args != 3:
-        print("Usage: {} <a> <operator> <b>".format(argv[0]))
+        print("Usage: {:s} <a> <operator> <b>".format(argv[0]))
         exit(1)
     operator_list = "+-*/"
     a = int(argv[1])
@@ -19,6 +19,7 @@ def calc_argv(argv):
             result = mul(a, b)
         else:
             result = div(a, b)
+            #print("{:d} {:s} {:d} = {:f}".format(a, operator, b, div(a, b)))
         print("{} {} {} = {}".format(a, operator, b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
