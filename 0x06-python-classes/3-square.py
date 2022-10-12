@@ -1,4 +1,4 @@
-#!/usr/bin/pytho3
+#!/usr/bin/python3
 """Working with classes, python OOP"""
 
 
