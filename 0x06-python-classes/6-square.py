@@ -5,8 +5,8 @@
 class Square():
     """Class that tries to model a square"""
     def __init__(self, size=0, position=(0,0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -47,7 +47,7 @@ class Square():
             Args:
                 self
         """
-        return (self.__size * self.__size)
+        return (self.size * self.size)
 
     def my_print(self):
         """print the square"""
