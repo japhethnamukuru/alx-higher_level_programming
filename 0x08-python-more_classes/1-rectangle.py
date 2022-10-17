@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+
 """Python OOP, classes and objects"""
+
 
 class Rectangle():
     """A class for creating rectangle instances"""
 
     def __init__(self, width=0, height=0):
+        """Initilize width and height"""
         self.width = width
         self.height = height
 
