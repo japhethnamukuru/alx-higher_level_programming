@@ -48,7 +48,7 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """string representation"""
+        """String representation"""
 
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -59,3 +59,9 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
+
+    def __repr__(self):
+        """Return the string representation of the rectangle"""
+        rect = "Rectangle(" + str(self.__width)
+        rect += "," + str(self.__height) + ")"
+        return rect
