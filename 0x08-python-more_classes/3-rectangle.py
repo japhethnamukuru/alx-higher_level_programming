@@ -49,13 +49,13 @@ class Rectangle:
 
     def __str__(self):
         """string representation"""
-        if self.width == 0 or self.height == 0:
-            print("")
+        if self.__width == 0 or self.__height == 0:
+            return ("")
 
         rect = []
-        for i in range(self.height):
-            [rect.append("#") for j in range(self.width)]
-            if i != self.height - 1:
+        for i in range(self.__height):
+            [rect.append("#") for j in range(self.__width)]
+            if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
 
