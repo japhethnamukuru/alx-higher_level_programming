@@ -3,13 +3,12 @@
 """Python OOP, classes and objects"""
 
 
-class Rectangle():
+class Rectangle:
     """A class for creating rectangle instances"""
 
     def __init__(self, width=0, height=0):
         """Initilize width and height
-
-            
+ 
           args:
             with(int)
             height(int)
