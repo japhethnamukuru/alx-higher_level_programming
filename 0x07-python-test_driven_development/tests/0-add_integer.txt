@@ -1,0 +1,21 @@
+>>> add_integer = __import__('0-add_integer').add_integer                                                                               
+>>> print(add_integer(1, 2)) # doctest: +NORMALIZE_WHITESPACE                                                                                                              
+3                                                                                                                                       
+>>> print(add_integer(100, -2)) # doctest: +NORMALIZE_WHITESPACE                                                                                                          
+98                                                                                                                                      
+>>> print(add_integer(2))  # doctest: +NORMALIZE_WHITESPACE                                                                                                             
+100                                                                                                                                     
+>>> print(add_integer(100.3, -2))   # doctest: +NORMALIZE_WHITESPACE                                                                                                      
+98                                                                                                                                      
+>>> try:                                                                                                                                
+...     print(add_integer(4, "School"))  # doctest: +NORMALIZE_WHITESPACE                                                                                                 
+... except Exception as e:                                                                                                              
+...     print(e) # doctest: +NORMALIZE_WHITESPACE                                                                                                                         
+...                                                                                                                                     
+b must be an integer                                                                                                                    
+>>> try:                                                                                                                                
+...     print(add_integer(None))  # doctest: +NORMALIZE_WHITESPACE                                                                                                        
+... except Exception as e:                                                                                                              
+...     print(e)  # doctest: +NORMALIZE_WHITESPACE                                                                                                                      
+...                                                                                                                                     
+a must be an integer  
