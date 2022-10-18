@@ -1,21 +1,36 @@
+=========================================
+	0-add_integer.py Usage
+=========================================
+This module documents an integer additio function ``add_integer(a, b=98)``
+
+Usage:
+======
+``add_integer(...)`` computes and returns the sum of its args
+
+::
+
+
 >>> add_integer = __import__('0-add_integer').add_integer                                                                               
->>> print(add_integer(1, 2)) # doctest: +NORMALIZE_WHITESPACE                                                                                                              
+>>> print(add_integer(1, 2))     #doctest: +NORMALIZE_WHITESPACE                                                                                                  
 3                                                                                                                                       
->>> print(add_integer(100, -2)) # doctest: +NORMALIZE_WHITESPACE                                                                                                          
+>>> print(add_integer(100, -2))  #doctest: +NORMALIZE_WHITESPACE                                                                                                
 98                                                                                                                                      
->>> print(add_integer(2))  # doctest: +NORMALIZE_WHITESPACE                                                                                                             
+>>> print(add_integer(2))       #doctest: +NORMALIZE_WHITESPACE                                                                     
 100                                                                                                                                     
->>> print(add_integer(100.3, -2))   # doctest: +NORMALIZE_WHITESPACE                                                                                                      
+>>> print(add_integer(100.3, -2))    #doctest: +NORMALIZE_WHITESPACE                                                                         
 98                                                                                                                                      
 >>> try:                                                                                                                                
-...     print(add_integer(4, "School"))  # doctest: +NORMALIZE_WHITESPACE                                                                                                 
+...     print(add_integer(4, "school"))   #doctest: +NORMALIZE_WHITESPACE                                                                    
 ... except Exception as e:                                                                                                              
-...     print(e) # doctest: +NORMALIZE_WHITESPACE                                                                                                                         
-...                                                                                                                                     
+...     print(e)     #doctest: +NORMALIZE_WHITESPACE                                                                                                          
+...                                                                                          
 b must be an integer                                                                                                                    
 >>> try:                                                                                                                                
-...     print(add_integer(None))  # doctest: +NORMALIZE_WHITESPACE                                                                                                        
+...     print(add_integer(None))   #doctest: +NORMALIZE_WHITESPACE                                                                                    
 ... except Exception as e:                                                                                                              
-...     print(e)  # doctest: +NORMALIZE_WHITESPACE                                                                                                                      
+...     print(e)   #doctest: +NORMALIZE_WHITESPACE                                                                      
 ...                                                                                                                                     
-a must be an integer  
+a must be an integer
+
+
+::
