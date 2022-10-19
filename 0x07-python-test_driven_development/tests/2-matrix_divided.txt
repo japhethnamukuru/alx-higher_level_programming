@@ -1,0 +1,25 @@
+=========================================
+	2-matrix_divided.py Usage
+=========================================
+This module documents the function ``matrix_divided(matrix, div)`` that returns the quotient after division
+
+Usage
+======
+``matrix_divided(...)`` takes two args, the matrix as the divider and div as the dividend.
+	returns a matrix, same size as the original matrix
+
+::
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> print(matrix_divided(matrix, 3))
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+::
+
+This funtion raises a traceback if the matrix elements are not floats or ints
+
+::
+	>>> matrix = [[1, 'school', 3], [3, 'Best', 8]]
+	>>> print(matrix_divided(matrix, 2))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
