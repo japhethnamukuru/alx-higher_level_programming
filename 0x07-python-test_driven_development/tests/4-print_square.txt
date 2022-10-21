@@ -1,0 +1,49 @@
+=====================================================================
+	4-print_sqaure.py Usage
+=====================================================================
+This module documens the function print_squate(size)
+
+	Usage
+	======
+function``print_square(size)`` takes in size as args and prints it using "#"
+
+::
+
+	>>> print_square = __import__("4-print_square").print_square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+::
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+::
+
+	>>> print_square(0)
+	
+
+::
+
+	>>> print_square(1)
+	#
+
+::
+
+	>>> try:
+	...	print_square(-1)
+	... except Exception as e:
+	...	print(e)
+	size must be >= 0
