@@ -1,0 +1,32 @@
+===============================================================
+	3-say_my_name.py Usage
+===============================================================
+This module documents the function ``say_my_name(...)``
+
+	Usage
+====================
+Prints a correctly formated full name
+
+::	
+
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+::
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+
+::
+
+	>>> say_my_name("Bob") #doctest: +NORMALIZE_WHITESPACE
+	My name is Bob
+
+::
+
+	>>> try:
+	...	say_my_name(12, "White")
+	... except Exception as e:
+	...	print(e)
+	first_name must be a string
