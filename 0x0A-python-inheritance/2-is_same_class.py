@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """functon for checkimg if a given object is an instance of the given class"""
 
 
