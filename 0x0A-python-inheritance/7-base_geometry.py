@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Python OOP, empty class that attempts to model a geometry"""
 
 
@@ -11,7 +12,6 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Validate an integer"""
-
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
