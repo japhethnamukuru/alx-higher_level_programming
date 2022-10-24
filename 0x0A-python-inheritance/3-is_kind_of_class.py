@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """Python OOP, check if an object is kind of"""
 
 
