@@ -23,5 +23,39 @@ class TestRectangleModel(unittest.TestCase):
     def test_instance_id(self):
         self.assertIsNot(self.obj.id, None)
 
+
+class TestRectangleAttributes(unittest.TestCase):
+    def setUp(self):
+        self.rect = Rectangle(1, 2)
+
+    def test_width_exception(self):
+        with self.assertRaises(TypeError):
+            self.rect1 = Rectangle('1', 2)
+
+        with self.assertRaises(ValueError):
+            self.rect2 = Rectangle(-1, 3)
+
+
+    def test_height_exception(self):
+        with self.assertRaises(TypeError):
+            self.obj = Rectangle(1, '2')
+
+        with self.assertRaises(ValueError):
+            self.obj1 = Rectangle(2, -1)
+
+    def test_x_exception(self):
+        with self.assertRaises(TypeError):
+            self.rect3 = Rectangle(1, 1, '1')
+
+        with self.assertRaises(ValueError):
+            self.rect3 = Rectangle(1, 1, -2)
+
+    def test_y_exception(self):
+        with self.assertRaises(TypeError):
+            self.rect = Rectangle(1, 1, 1, '1')
+
+        with self.assertRaises(ValueError):
+            self.rect = Rectangle(1, 1, 1, -2)
+
 if __name__ == '__main__':
     unittest.main()
