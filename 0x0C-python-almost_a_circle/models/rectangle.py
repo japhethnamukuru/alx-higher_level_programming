@@ -94,4 +94,4 @@ class Rectangle(Base):
             print("#" * self.width)
            
     def __str__(self):
-        return "[Retangle] ({:d}) {:d} {:d}".format(self.id, self.x, self.y)
+        return "[Retangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
