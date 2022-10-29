@@ -90,8 +90,16 @@ class Rectangle(Base):
     def display(self):
         """display rectangle using '#' """
 
+        rectangle = self.y * '\n'
         for i in range(self.height):
-            print("#" * self.width)
+            rectangle += (" " * self.x)
+            rectangle += ("#" * self.width) + '\n'
+        print(rectangle, end="")
+
+    def update(self, *args):
+        """Assign args to each attribute"""
+
+        setattr(self.id, self.width, self.height, self.x, self.y) for arg in args
            
     def __str__(self):
         return "[Retangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
