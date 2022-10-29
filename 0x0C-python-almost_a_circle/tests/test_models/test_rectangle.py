@@ -61,13 +61,10 @@ class TestRectangleAttributes(unittest.TestCase):
 class TestRectangleMethods(unittest.TestCase):
     def setUp(self):
         self.rect = Rectangle(3, 4)
-        self.rect1 = Rectangle(1, 1)
+        self.rect1 = Rectangle(4, 6, 2, 1, 12)
 
     def test_rectangle_area_method(self):
         self.assertEqual(self.rect.area(), 12)
-
-    def test_rectangle_display_method(self):
-        self.assertEqual(self.rect1.display(),'#')
 
 
 if __name__ == '__main__':
