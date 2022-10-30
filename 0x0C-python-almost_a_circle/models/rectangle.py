@@ -99,7 +99,11 @@ class Rectangle(Base):
     def update(self, *args):
         """Assign args to each attribute"""
 
-        setattr(self.id, self.width, self.height, self.x, self.y) for arg in args
+        if args is not None and len(args) != 0:
+            attributes = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+
            
     def __str__(self):
         return "[Retangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
