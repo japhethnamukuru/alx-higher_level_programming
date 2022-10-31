@@ -37,5 +37,15 @@ class Square(Rectangle):
                 else:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        args_list = ['id', 'size', 'x', 'y']
+        sq_dict = {}
+
+        for key in args_list:
+            sq_dict[key] = getattr(self, key)
+
+        return sq_dict
+
+
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
