@@ -34,3 +34,19 @@ class TestSquareattributes(unittest.TestCase):
     def test_update_method_args_y(self):
         self.sq.update(1, 2, 3, 4)
         self.assertEqual(self.sq.y, 4)
+        
+
+    def test_update_method_kwargs_x(self):
+        self.sq.update(x=12)
+        self.assertEqual(self.sq.x, 12)
+
+    def test_update_method_kwargs_size_y(self):
+        self.sq.update(size=7, y=1)
+        self.assertEqual(self.sq.size, 7)
+        self.assertEqual(self.sq.y, 1)
+
+    def test_update_method_kwargs_id(self):
+        self.sq.update(size=7, id=89, y=1)
+        self.assertEqual(self.sq.size, 7)
+        self.assertEqual(self.sq.id, 89)
+        self.assertEqual(self.sq.y, 1)
