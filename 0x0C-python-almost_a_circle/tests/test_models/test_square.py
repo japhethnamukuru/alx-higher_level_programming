@@ -50,3 +50,14 @@ class TestSquareattributes(unittest.TestCase):
         self.assertEqual(self.sq.size, 7)
         self.assertEqual(self.sq.id, 89)
         self.assertEqual(self.sq.y, 1)
+
+    def test_to_dictionary_method(self):
+        sq_dict = self.sq.to_dictionary()
+        args_list = ['id', 'size', 'x', 'y']
+        keys = []
+
+        for key in sq_dict.keys():
+            keys.append(key)
+
+        self.assertEqual(keys, args_list)
+        self.assertIsInstance(sq_dict, dict)
