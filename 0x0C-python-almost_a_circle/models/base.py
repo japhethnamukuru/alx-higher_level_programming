@@ -2,7 +2,7 @@
 
 """Python OOP, unit tests and file IO"""
 import json
-
+import os
 
 class Base:
     """Base class for all other classes"""
@@ -56,4 +56,23 @@ class Base:
 
         obj.update(**dictionary)
         return obj
+       
+    @classmethod
+    def load_from_file(cls):
+        filename = '{}.json'.format(cls.__name__)
+
+        if not os.path.exists(filename):
+            return []
         
+        with open(filename) as file_obj:
+            lists = file_obj.read()
+
+        liststr = cls.from_json_string(lists)
+        objs = []
+
+        for obj in range(len(liststr)):
+            objs.append(cls.create(**liststr[obj]))
+
+        return objs
+
+            
