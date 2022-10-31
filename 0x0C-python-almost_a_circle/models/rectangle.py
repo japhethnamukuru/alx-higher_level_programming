@@ -107,6 +107,15 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key,value)
 
+    def to_dictionary(self):
+        args_list = ['id', 'width', 'height', 'x', 'y']
+        self_dict = {}
+
+        for key in args_list:
+            self_dict[key] = getattr(self, key)
+
+        return self_dict
+
            
     def __str__(self):
         return "[Retangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
