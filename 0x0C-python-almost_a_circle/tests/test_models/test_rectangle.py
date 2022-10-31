@@ -110,6 +110,14 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(self.rect1.y, 3)
         self.assertEqual(self.rect1.width, 4)
 
+    def test_to_dictionary_method(self):
+        rect = self.rect1.to_dictionary()
+        rect_keys = []
+        for key in rect.keys():
+            rect_keys.append(key)
+        self.assertEqual(rect_keys, ['id', 'width', 'height', 'x', 'y'])
+        self.assertIsInstance(rect, dict)
+
 
 if __name__ == '__main__':
     unittest.main()
