@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """Python OOP, creating classes and objects, writting tests"""
-from .base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
